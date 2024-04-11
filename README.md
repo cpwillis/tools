@@ -41,3 +41,45 @@ cecho "Please try again or exit the script (ctrl+c)." "$red"
 ```
 
 </details>
+
+### VSCode
+
+<details>
+  <summary>TODO Highlight Extension Colours</summary>
+  
+  [ext](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight), [col ref](https://github.com/wayou/vscode-todo-highlight/issues/93#issuecomment-390368341)
+
+```
+  "todohighlight.keywords": [
+    {
+      "text": "NOTE",
+      "color": "#ecf0f1",
+      "border": "1px solid #2980b9",
+      "borderRadius": "4px",
+      "backgroundColor": "#3498db"
+    },
+    {
+      "text": "FIXME",
+      "color": "#ecf0f1",
+      "border": "1px solid #8e44ad",
+      "borderRadius": "4px",
+      "backgroundColor": "#9b59b6"
+    },
+    {
+      "text": "BUG",
+      "color": "#ecf0f1",
+      "border": "1px solid #c0392b",
+      "borderRadius": "4px",
+      "backgroundColor": "#e74c3c"
+    },
+    {
+      "text": "TODO",
+      "color": "#ecf0f1",
+      "border": "1px solid #f39c12",
+      "borderRadius": "4px",
+      "backgroundColor": "#f1c40f"
+    }
+  ]
+```
+
+</details>
