@@ -1,7 +1,11 @@
 # tools
 
+### Python
+
 <details>
-  <summary>Custom J2 Ext to Wrap Templates with their Filename: [wrap_templates_extension.py](./python/wrap_templates_extension.py)</summary>
+  <summary>Custom J2 Ext to Wrap Templates with their Filename</summary>
+
+[wrap_templates_extension.py](./python/wrap_templates_extension.py)
 
 Add comments or annotations to template files (`.html.j2`, `.css.j2`, `.js.j2`) before rendering them in a Jinja environment, providing clarity about the start and end of each template block. Example usage;
 
@@ -14,11 +18,15 @@ if os.getenv("LOCAL_MODE") == "yes" and os.getenv("TEST_MODE") != "yes":
 </details>
 
 <details>
-  <summary>Function Profiler: [profiler.py](./python/profiler.py)</summary>
+  <summary>Function Profiler</summary>
+
+[profiler.py](./python/profiler.py)
 
 The `profileme` decorator in Python facilitates function execution profiling, directing the results to a file named after the function being profiled. It offers options to specify the directory and sorting method for the profile statistics.
 
 </details>
+
+### Shell
 
 <details>
   <summary>Shell Colour Echo</summary>
