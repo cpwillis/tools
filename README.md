@@ -31,13 +31,10 @@ The `profileme` decorator in Python facilitates function execution profiling, di
 <details>
   <summary>Shell Colour Echo</summary>
 
-```sh
-black=$(tput setaf 0) red=$(tput setaf 1) green=$(tput setaf 2) yellow=$(tput setaf 3) blue=$(tput setaf 4) magenta=$(tput setaf 5) cyan=$(tput setaf 6) white=$(tput setaf 7) reset=$(tput sgr0)
-cecho() { echo "${2}${1}${reset}"; } # $1=msg $2=col
-```
+[colour_echo.sh](./shell/colour_echo.sh)
 
 ```sh
-cecho "Please try again or exit the script (ctrl+c)." "$red"
+cecho "I'm an example." "$red"
 ```
 
 </details>
@@ -47,39 +44,6 @@ cecho "Please try again or exit the script (ctrl+c)." "$red"
 <details>
   <summary>TODO Highlight Extension Colours</summary>
   
-  [ext](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight), [col ref](https://github.com/wayou/vscode-todo-highlight/issues/93#issuecomment-390368341)
-
-```
-  "todohighlight.keywords": [
-    {
-      "text": "NOTE",
-      "color": "#ecf0f1",
-      "border": "1px solid #2980b9",
-      "borderRadius": "4px",
-      "backgroundColor": "#3498db"
-    },
-    {
-      "text": "FIXME",
-      "color": "#ecf0f1",
-      "border": "1px solid #8e44ad",
-      "borderRadius": "4px",
-      "backgroundColor": "#9b59b6"
-    },
-    {
-      "text": "BUG",
-      "color": "#ecf0f1",
-      "border": "1px solid #c0392b",
-      "borderRadius": "4px",
-      "backgroundColor": "#e74c3c"
-    },
-    {
-      "text": "TODO",
-      "color": "#ecf0f1",
-      "border": "1px solid #f39c12",
-      "borderRadius": "4px",
-      "backgroundColor": "#f1c40f"
-    }
-  ]
-```
+  [todohighlight.json](./vscode/todohighlight.json) --> [Extension (Marketplace)](https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight), [Reference Colours](https://github.com/wayou/vscode-todo-highlight/issues/93#issuecomment-390368341)
 
 </details>
