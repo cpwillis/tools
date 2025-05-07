@@ -26,6 +26,60 @@ The `profileme` decorator in Python facilitates function execution profiling, di
 
 </details>
 
+<details>
+  <summary>Click Start/End Wrapper</summary>
+
+[log_start_end.py](./python/log_start_end.py)
+
+The `log_start_end` decorator in Python adds a logger event before and after the execution of a cli command.
+
+</details>
+
+<details>
+  <summary>Function to Abbreviate Numbers</summary>
+
+```py
+def format_abbreviated_number(value: int) -> str:
+    """
+    Convert a number to a human-readable string:
+    - Abbreviates clean round numbers in thousands (k), millions (m), billions (b), etc.
+    - Uses comma formatting for numbers with variations or smaller values.
+    - Returns the original value if it's not an integer or cannot be converted to one.
+    - Returns "None" if the value is zero.
+    """
+
+    # Check if the value is an integer
+    if not isinstance(value, int):
+        return str(value)
+
+    # Check if the value is zero
+    if value == 0:
+        return "None"
+
+    # Check if a number is followed by all zeros
+    # Without this, the modulus check mis-abbreviates numbers like 10022000 as 10022k instead of 10,022,000 (incorrectly divisible by 1000).
+    def is_clean_multiple(value):
+        return value % 10 ** len(str(value).rstrip("0")) == 0
+
+    # Check for clean multiples and abbreviate them
+    if is_clean_multiple(value):
+        if value % 1_000_000_000_000_000 == 0:
+            return f"{value // 1_000_000_000_000_000}q"  # Quadrillion
+        elif value % 1_000_000_000_000 == 0:
+            return f"{value // 1_000_000_000_000}t"  # Trillion
+        elif value % 1_000_000_000 == 0:
+            return f"{value // 1_000_000_000}b"  # Billion
+        elif value % 1_000_000 == 0:
+            return f"{value // 1_000_000}m"  # Million
+        elif value % 1_000 == 0:
+            return f"{value // 1_000}k"  # Thousand
+
+    # If the number is not a clean multiple, return the full value with commas
+    return f"{value:,.0f}"
+```
+
+</details>
+
 ### Shell
 
 <details>
